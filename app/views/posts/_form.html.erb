@@ -20,6 +20,10 @@
     <%= f.label :content %><br> 
     <%= f.text_area :content %><br> 
   </div>
+  <div class="field">
+      <!-- 1.what is the name of that attr    #2.what collection(an array)3. data that will be passed 4.what gets displayed -->
+    <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %><br>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
